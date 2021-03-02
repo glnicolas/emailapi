@@ -6,8 +6,11 @@ const cors = require('cors');
 require('dotenv').config();
 
 const app = express();
-app.use(bodyParser.json());
+//app.use(bodyParser.json());
 app.use(cors());
+app.use(express.json());
+app.use(express.urlencoded({ extended: false }));
+
 const port = process.env.PORT || 3000;;
 
 var mail = nodemailer.createTransport({
