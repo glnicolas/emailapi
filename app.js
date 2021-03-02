@@ -30,7 +30,7 @@ app.post('/send', (req, res) => {
     to: [mail_to, process.env.email_user],
     subject: 'Gracias por contactarme',
     text: 'Hello world',
-    html: ` <h2> ¡Hola ${name}! Agradezco su intención por contactarme. </h2> 
+    html: ` <h2> ¡Hola ${name}! </h2> 
             <p>Es un placer poder atenderle, por lo que estaré contactandome a la brevedad. A continuación, se muestra la información que fue proporcionada: </p> 
             <table>
               <tr> 
