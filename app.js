@@ -1,12 +1,11 @@
 const express = require('express');
 const nodemailer = require('nodemailer');
-const bodyParser = require('body-parser');
 const cors = require('cors');
 
 require('dotenv').config();
 
 const app = express();
-//app.use(bodyParser.json());
+
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
@@ -34,7 +33,7 @@ app.post('/send', (req, res) => {
     subject: 'Gracias por contactarme',
     text: 'Hello world',
     html: ` <h2> ¡Hola ${name}! </h2> 
-            <p>Es un placer poder atenderle, por lo que estaré contactandome a la brevedad. A continuación, se muestra la información que fue proporcionada: </p> 
+            <p>Es un placer poder atenderle, por lo que estaré contactándome a la brevedad. A continuación, se muestra la información que fue proporcionada: </p> 
             <table>
               <tr> 
                 <td> Telefono:</td>
