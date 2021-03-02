@@ -8,7 +8,7 @@ require('dotenv').config();
 
 const app = express();
 app.use(bodyParser.json());
-const port = 3000;
+const port = process.env.PORT || 3000;;
 
 var mail = nodemailer.createTransport({
   service: 'gmail',
