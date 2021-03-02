@@ -22,7 +22,7 @@ app.post('/send', (req, res) => {
 
   var mail_to = req.body.email;
   var name = req.body.nombre;
-  var phone = req.body.telefone;
+  var phone = req.body.telefono;
   var message = req.body.mensaje;
 
   var mailOptions = {
