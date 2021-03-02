@@ -20,10 +20,10 @@ var mail = nodemailer.createTransport({
 
 app.post('/send', (req, res) => {
 
-  var mail_to = req.body.mail_to;
-  var name = req.body.name;
-  var phone = req.body.phone;
-  var message = req.body.message;
+  var mail_to = req.body.email;
+  var name = req.body.nombre;
+  var phone = req.body.telefone;
+  var message = req.body.mensaje;
 
   var mailOptions = {
     from: process.env.email_user,
