@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-const port = process.env.PORT || 3000;;
+const port = process.env.PORT || 3001;;
 
 var mail = nodemailer.createTransport({
   service: 'gmail',
@@ -22,7 +22,7 @@ var mail = nodemailer.createTransport({
 });
 
 app.post('/send', (req, res) => {
-
+  console.log(req.body);
   var mail_to = req.body.email;
   var name = req.body.nombre;
   var phone = req.body.telefono;
